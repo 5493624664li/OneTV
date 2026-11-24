@@ -101,7 +101,7 @@ class AppTileView(context:Context):View(context) {
     }
 
     private fun applyFocusFrac() {
-        val s = 1f + 0.05f * focusFrac
+        val s = 1f + 0.3f * focusFrac
         scaleX = s
         scaleY = s
         invalidate()
@@ -129,7 +129,7 @@ class AppTileView(context:Context):View(context) {
         rimPath.reset()
         rimPath.addPath(roundedRectPath(rim, rim, w - rim, h - rim, (radius - rim).coerceAtLeast(0f)))
 
-        glowStroke = (h * 0.014f).coerceIn(1.5f, 4f)
+        glowStroke = (h * 0.034f).coerceIn(1.7f, 6f)
         val gi = glowStroke / 2f
         glowPath.reset()
         glowPath.addPath(roundedRectPath(gi, gi, w - gi, h - gi, (radius - gi).coerceAtLeast(0f)))
